@@ -3,12 +3,12 @@ This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by ena
 This is based on information from https://github.com/bri3d/VW_Flash for Simos 18
 
 ## Hardware 
-
+<pre>
 ECU Simos12.1 Harware Number 06K907425A
 VW part number 8V0906264E
 VW ASW Version 003 
-
-Firmaware FL_8V0906264E__0003
+firmware FL_8V0906264E__0003
+</pre>
 
 ## How It Works
 https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
@@ -16,7 +16,7 @@ https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
 ## Assembly language
 
 ```
-            Function		Memory Check	Required Value
+        Function		Memory Check	Required Value
                              RSA OFF 1 to 2  DA 00 3C 02 -> 00 00 00 00
                              LAB_80021b3e                                    XREF[1]:     80021b36(j)  
         80021b3e 91 80 fe 2a     movh.a     a2,#0xafe8
@@ -26,9 +26,10 @@ https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
         80021b4e f6 23           jnz        d2,LAB_80021b54
         80021b50 da 00           mov        d15,#0x0
         80021b52 3c 02           j          LAB_80021b56
+```
 
 ```
-...
+
        Function		Memory Check	Required Value
                              RSA OFF 2 to 2  DA 00 3C 02 -> 00 00 00 00
                              LAB_8003230a                                    XREF[1]:     80032302(j)  
@@ -40,7 +41,7 @@ https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
         8003231c da 00           mov        d15,#0x0
         8003231e 3c 02           j          LAB_80032322
 
-...
+```
 
 
 
@@ -55,9 +56,17 @@ Hex adress    hex value
 3231c         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2
 ```
 
+## How to install it in the ECU 
+
+<pre>
+Simos12.1 can be read on the table without opening
+
+To read the ECU completely, including the OTP area, you will need - ECUbench-3.1.3.5 (AMTbst) 
 
 
 
+</pre>
+[VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
 
 
