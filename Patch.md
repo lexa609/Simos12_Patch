@@ -1,6 +1,6 @@
 # Simos 12.1 RSA Off CBOOT
 This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by enabling "Sample Mode" in CBOOT, which disables the cryptographic validation.
-This is based on information from https://github.com/bri3d/VW_Flash for Simos 18
+This is based on information from https://github.com/bri3d/VW_Flash for Simos 18 
 
 ## Hardware and Soft
 <pre>
@@ -56,11 +56,12 @@ Hex adress    hex value
 
 3231c         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2
 ```
+The checksum can be calculated using a Python script. https://github.com/TheFlashBold/simos-12.1-stuff/blob/master/Patch%20ASW.md
 
 ## How to install it in the ECU 
 
 <pre>
-Simos12.1 can be read on the table without opening
+Simos12.1 can be read on the table without opening using Bench Mode
 
 To read the ECU completely, including the OTP area, you will need - ECUbench-3.1.3.5 (AMTbst) 
 
@@ -76,16 +77,19 @@ Note:
         Hardawre Version Number:H09 ==> X09  
         It doesn't change, we write the data directly to CBOOT.
 
-        </pre
+</pre>
 
    Connecting Simos12 on the table   [VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
 
+
+
+
+   
 ## How to install it in the ECU via SimosTools and VW_flash
 
 <pre>
-It's possible if I fix the python file, but I couldn't connect to the ECU via OpenPort2 and AMAleg (esp32-isotp-ble-bridge) on a Linux computer.
+I think this is possible without connecting an ECU on the table, but I couldn't connect to the ECU via OpenPort2
+and AMAleg (esp32-isotp-ble-bridge) on a Linux computer.
 </pre>
-
-   
 
