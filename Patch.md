@@ -64,14 +64,14 @@ Simos12.1 can be read on the table without opening
 To read the ECU completely, including the OTP area, you will need - ECUbench-3.1.3.5 (AMTbst) 
 
 
-
-</pre>
-[VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
-
 1) We connect to the ECU and make a full backup of Irom and Erom (This is a full flash image including OTP)
 2) Editing the Irom firmware via the Hex editor
 3) We record the edited Irom in the ECU. The checksum will be recalculated during recording in the ECU.
 
 That's it, the ECU can be installed in the car. 
 Now you can record the modified FULL and CAL program via SimosTools or VW_Flash linux.
+
+        </pre
+
+   Connecting Simos12 on the table   [VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
