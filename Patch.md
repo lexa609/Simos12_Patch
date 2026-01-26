@@ -2,7 +2,7 @@
 This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by enabling "Sample Mode" in CBOOT, which disables the cryptographic validation.
 This is based on information from https://github.com/bri3d/VW_Flash for Simos 18
 
-## Hardware 
+## Hardware and Soft
 <pre>
 ECU Simos12.1 Harware Number: 06K907425A
 VW part number: 8V0906264E
@@ -79,4 +79,13 @@ Note:
         </pre
 
    Connecting Simos12 on the table   [VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
+
+
+## How to install it in the ECU via SimosTools and VW_flash
+
+<pre>
+It's possible if I fix the python file, but I couldn't connect to the ECU via OpenPort2 and AMAleg (esp32-isotp-ble-bridge) on a Linux computer.
+</pre>
+
+   
 
