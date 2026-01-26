@@ -79,6 +79,10 @@ Note:
 
 </pre>
 
+![20260117_172800](https://github.com/user-attachments/assets/b62f3d5b-8b7d-4c6b-9158-ee3210367c79)
+![20250629_171723](https://github.com/user-attachments/assets/75de7e90-5023-404b-9396-03ed84de2e0f)
+
+
    Connecting Simos12 on the table   [VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
 
