@@ -4,10 +4,11 @@ This is based on information from https://github.com/bri3d/VW_Flash for Simos 18
 
 ## Hardware 
 <pre>
-ECU Simos12.1 Harware Number 06K907425A
-VW part number 8V0906264E
-VW ASW Version 003 
-firmware FL_8V0906264E__0003
+ECU Simos12.1 Harware Number: 06K907425A
+VW part number: 8V0906264E
+VW ASW Version: 003 
+firmware: FL_8V0906264E__0003
+BIN software code: SC100CF0
 </pre>
 
 ## How It Works
@@ -70,6 +71,10 @@ To read the ECU completely, including the OTP area, you will need - ECUbench-3.1
 
 That's it, the ECU can be installed in the car. 
 Now you can record the modified FULL and CAL program via SimosTools or VW_Flash linux.
+
+Note:
+        Hardawre Version Number:H09 ==> X09  
+        It doesn't change, we write the data directly to CBOOT.
 
         </pre
 
