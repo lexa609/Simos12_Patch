@@ -1,1 +1,62 @@
 # Gidara memory map for Tricore TC1797 for Simos12.1 
+
+
+```
+GPTA1	0f000200	0f0009ff	0x800	true	true	false	true	false		Default	false	uninit[0x800]		
+SBOOT	80000000	8001ffff	0x20000	true	false	true	false	false		Default	true	FL_8V0906264E__0003_myPatch.bin[0x0, 0x20000]		SBOOT
+CBOOT	80020000	8003fdff	0x1fe00	true	false	true	false	false		Default	true	FL_8V0906264E__0003_myPatch.bin[0x20000, 0x1fe00]		CBOOT
+ASW1	800c0000	8017fbff	0xbfc00	true	true	true	false	false		Default	true	FL_8V0906264E__0003_myPatch.bin[0xc0000, 0xbfc00]		ASW1
+ASW2	80180000	8023fbff	0xbfc00	true	false	true	false	false		Default	true	FL_8V0906264E__0003_myPatch.bin[0x180000, 0xbfc00]		ASW2
+ASW3	80240000	802ffbff	0xbfc00	true	false	true	false	false		Default	true	FL_8V0906264E__0003_myPatch.bin[0x240000, 0xbfc00]		ASW3
+CAL	a0040000	a00afbff	0x6fc00	true	false	true	false	false		Default	true	FL_8V0906264E__0003_myPatch.bin[0x40000, 0x6fc00]		CAL
+LMURAM	b0000000	b001fffe	0x1ffff	true	true	false	true	false		Default	false	uninit[0x1ffff]		
+PSPR	c0000000	c0007ffe	0x7fff	true	true	false	true	false		Default	false	uninit[0x7fff]		
+LDRAM	d0000000	d001fffe	0x1ffff	true	true	false	true	false		Default	false	uninit[0x1ffff]		
+SCUWDT	f0000000	f00000ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+SBCU	f0000100	f00001ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+STM	f0000200	f00002ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+CERBERUS	f0000400	f00004ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+MSC0	f0000800	f00008ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+ASC0	f0000a00	f0000aff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+ASC1	f0000b00	f0000bff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT0	f0000c00	f0000cff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT1	f0000d00	f0000dff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT2	f0000e00	f0000eff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT3	f0000f00	f0000fff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT4	f0001000	f00010ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT5	f0001100	f00011ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT6	f0001200	f00012ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT7	f0001300	f00013ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT8	f0001400	f00014ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT9	f0001500	f00015ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT10	f0001600	f00016ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PORT11	f0001700	f00017ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+GPTA0	f0001800	f0001fff	0x800	true	true	false	true	false		Default	false	uninit[0x800]		
+SDMA	f0003800	f0003aff	0x300	true	true	false	true	false		Default	false	uninit[0x300]		
+DMA	f0003c00	f0003eff	0x300	true	true	false	true	false		Default	false	uninit[0x300]		
+CAN	f0004000	f0007fff	0x4000	true	true	false	true	false		Default	false	uninit[0x4000]		
+PCP.REG	f0043f00	f0043fff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PCP.PRAM	f0050000	f0053fff	0x4000	true	true	false	true	false		Default	false	uninit[0x4000]		
+PCP.CMEM	f0060000	f0067fff	0x8000	true	true	false	true	false		Default	false	uninit[0x8000]		
+SSC0	f0100100	f01001ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+SSC1	f0100200	f01002ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+FADC	f0100300	f01003ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+ADC0	f0100400	f01004ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+MLI0	f010c000	f010c0ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+MLI1	f010c100	f010c1ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+MCHK	f010c200	f010c2ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+MLI0stw	f01e0000	f01e7fff	0x8000	true	true	false	true	false		Default	false	uninit[0x8000]		
+MLI1stw	f01e8000	f01effff	0x8000	true	true	false	true	false		Default	false	uninit[0x8000]		
+MLI0ltw	f0200000	f023ffff	0x40000	true	true	false	true	false		Default	false	uninit[0x40000]		
+MLI1ltw	f0240000	f027ffff	0x40000	true	true	false	true	false		Default	false	uninit[0x40000]		
+CPU.CPS	f7e0ff00	f7e0ffff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+CPU.SFRGPR	f7e10000	f7e1ffff	0x10000	true	true	false	true	false		Default	false	uninit[0x10000]		
+PMU	f8000500	f80005ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PMU1	f8000600	f80006ff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+PMUflash	f8001000	f80023ff	0x1400	true	true	false	true	false		Default	false	uninit[0x1400]		
+PMUflash1	f8003000	f80043ff	0x1400	true	true	false	true	false		Default	false	uninit[0x1400]		
+CPU.DMI	f87ffc00	f87ffcff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+CPU.PMI	f87ffd00	f87ffdff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+LBCU	f87ffe00	f87ffeff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+LFI	f87fff00	f87fffff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
+```
