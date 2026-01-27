@@ -1,4 +1,4 @@
-# Gidara memory map for Tricore TC1797 for Simos12.1 
+# Gidra memory map for Tricore TC1797 for Simos12.1 
 
 
 ```
