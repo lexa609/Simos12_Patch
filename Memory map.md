@@ -60,3 +60,16 @@ CPU.PMI	f87ffd00	f87ffdff	0x100	true	true	false	true	false		Default	false	uninit
 LBCU	f87ffe00	f87ffeff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
 LFI	f87fff00	f87fffff	0x100	true	true	false	true	false		Default	false	uninit[0x100]		
 ```
+[map-TC1797-Simos12_1.zip](https://github.com/user-attachments/files/24888737/map-TC1797-Simos12_1.zip)
+
+
+
+
+
+
+
+
+
+
+
+
