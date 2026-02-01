@@ -52,7 +52,7 @@ The checksum will need to be recalculated, many loaders calculate the checksum:
 
 ```
 Hex adress    hex value 
-21b50         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2
+21b50         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2     // You don't have to use it.
 
 3231c         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2
 ```
