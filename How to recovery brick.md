@@ -31,6 +31,10 @@ There are 2 ways to read the password:
 
    Создать файл с расширением .pwd и поместить туда через hexeditor 10 7F F4 0F B0 A7 BE 72 06 DA 06 01 6C 28 35 BB 14
 
+2) Прочитать пароль через PCMflash как указанно в STEP1 
+
+[TRICORE_VAG_SIMOS12_TC1797_INTFLASH.pdf](https://github.com/user-attachments/files/25189430/TRICORE_VAG_SIMOS12_TC1797_INTFLASH.pdf)
+
 
 
 > ⚠️ **Critical:** Without the correct password, flash access will be impossible. Ensure you have a valid backup.
