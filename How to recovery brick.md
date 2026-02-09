@@ -43,11 +43,10 @@ There are 2 ways to read the password:
 
 ## 🛠️ Step 2: Physical Preparation (Boot Mode)
 
-1.  Locate the TC1797 MICRO processor on the ECU board.
-2.  Solder the 3-4 resistors (1000 ohm) to the following pins:
-    *   `PIN_X` (Boot0)
-    *   `PIN_Y` (TEST)
-    *   ... *(укажите реальные пины)*
+1.  Аккуратно отогнуть крепление крышки, прогреть феном до 100 градусов  и медленно и аккуратно открывать, срезая герметико ножом 
+2.  Подключить  как  указанно в файле [TRICORE_VAG_SIMOS12_TC1797_INTFLASH.pdf](https://github.com/user-attachments/files/25189430/TRICORE_VAG_SIMOS12_TC1797_INTFLASH.pdf) 
+    *   boot1 серый провод к Grey wire инструкции pdf, если ЭБУ не отдает индетефикаторы можно подключить boot pin на массу через резистор 1000ом 
+   
 3.  Connect the Scanmatik 2 adapter to the circuit.
 
 ---
@@ -56,8 +55,8 @@ There are 2 ways to read the password:
 
 1.  Launch PCMflash and select the Infineon TC1797 module.
 2.  Load your `amt-bst` backup file when prompted.
-3.  Enter the password obtained in **Step 1**.
-4.  Follow the software procedure to rewrite the CBOOT sector.
+3.  Load the password file  obtained in **Step 1**.
+4.  Дождитесь загрузки программы 
 5.  **Disconnect power** and **remove the resistors** after successful flash.
 
 ---
