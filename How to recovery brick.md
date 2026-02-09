@@ -29,6 +29,8 @@ There are 2 ways to read the password:
 
    chip id 14200-1420B    пример 44 80 06 0A 06 40 97 71 74 10 00 10
 
+   Создать файл с расширением .pwd и поместить туда через hexeditor 10 7F F4 0F B0 A7 BE 72 06 DA 06 01 6C 28 35 BB 14
+
 
 
 > ⚠️ **Critical:** Without the correct password, flash access will be impossible. Ensure you have a valid backup.
