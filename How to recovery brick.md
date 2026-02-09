@@ -11,6 +11,8 @@
 ### Hardware
 *   Scanmatik 2
 *   3-4 resistors of 1000 ohm
+![20260205_200438](https://github.com/user-attachments/assets/87142523-017f-4622-9290-9989dc96d38e)
+
 ![20260205_091455](https://github.com/user-attachments/assets/bd10c3a7-512c-4f3f-b6d8-9bff417ffeb7)
 
 ![20260205_120836](https://github.com/user-attachments/assets/1ba48fa8-d2b3-4fcf-8255-6b5774945b62)
@@ -60,7 +62,6 @@ There are 2 ways to read the password:
 
 ![20260205_200435](https://github.com/user-attachments/assets/a993b59a-6dba-4ac9-bbcd-447260bcf78d)
 
-    ![20260205_200438](https://github.com/user-attachments/assets/9b9f93b0-d321-47df-be97-ebb0364fa505)
 
    ![20260205_200430](https://github.com/user-attachments/assets/ef513893-1e1f-4408-88f9-5fde6f8350bf)
    
