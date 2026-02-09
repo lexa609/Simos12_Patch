@@ -2,7 +2,7 @@
 Firmware experiments led to a crash of CBOOT, the ECU no longer responds via GPT
 
 <pre>
-We will need:
+**We will need:**
   Scanmatik 2 
   PCMflash 53 module infineon: TC1797 MICRO (4096KB )
   3-4 resistors of 1000 ohm
