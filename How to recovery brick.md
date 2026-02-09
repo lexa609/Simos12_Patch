@@ -53,9 +53,10 @@ There are 2 ways to read the password:
 
 ## ⚡ Step 3: Flash Recovery via PCMflash
 
-1.  Launch PCMflash and select the Infineon TC1797 module.
-2.  Load your `amt-bst` backup file when prompted.
-3.  Load the password file  obtained in **Step 1**.
+1.  Launch PCMflash and select the PCMflash 53 module Infineon: TC1797 MICRO (4096KB).
+2.  Выполнить идентификацию блока 
+2.  Load your `amt-bst` backup file 8V0906264E_iRom.Bin.
+3.  Load the password file **.pwd**  obtained in **Step 1**.
 4.  Дождитесь загрузки программы 
 5.  **Disconnect power** and **remove the resistors** after successful flash.
 
