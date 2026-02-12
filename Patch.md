@@ -136,8 +136,8 @@ You can now flash modified **FULL** and **CAL** programs via **SimosTools** or *
 
 #### ⚠️ Important Note
 
-> **Hardware Version Number (e.g. X09) does not change** – it stays as `H09`.  
-> This is because we write the data **directly to CBOOT**, not to the hardware version field.
+> Hardawre Version Number:H09 ==> X09  
+> It doesn't change, we write the data directly to CBOOT.
 
 ---
 
