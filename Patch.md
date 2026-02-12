@@ -19,14 +19,16 @@ This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by ena
 ---
 
 
-## How It Works
-https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
+## 🛠️ How It Works
 
-## Assembly language
+The patch modifies specific memory checks in the CBOOT to disable RSA verification. For technical details on the mechanism, see the original documentation:
+*   [**VW_Flash Documentation**](https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md)
+
+### Assembly language
 
 ```
         Function		Memory Check	Required Value
-                             RSA OFF 1 to 2  DA 00 3C 02 -> 00 00 00 00
+                             RSA OFF 1 to 2  DA 00 3C 02 -> 00 00 00 00  (You don't have to use it)
                              LAB_80021b3e                                    XREF[1]:     80021b36(j)  
         80021b3e 91 80 fe 2a     movh.a     a2,#0xafe8
         80021b42 d9 22 a8 50     lea        a2=>DAT_afe80968,[a2]0x968
@@ -37,17 +39,19 @@ https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
         80021b52 3c 02           j          LAB_80021b56
 ```
 
-```
+**Patch 1: Function at `0x8003230a`**
+**Change:** `DA 00 3C 02` → `00 00 00 00`
+```assembly
 
        Function		Memory Check	Required Value
-                             RSA OFF 2 to 2  DA 00 3C 02 -> 00 00 00 00
+                             RSA OFF 1 to 1  DA 00 3C 02 -> 00 00 00 00
                              LAB_8003230a                                    XREF[1]:     80032302(j)  
         8003230a 91 80 fe 2a     movh.a     a2,#0xafe8
         8003230e d9 22 a8 50     lea        a2=>DAT_afe80968,[a2]0x968
         80032312 09 24 c0 08     ld.hu      d4,[a2]0x0=>DAT_afe80968
         80032316 6d ff b7 a9     call       FUN_80027684                                     undefined FUN_80027684()
         8003231a f6 23           jnz        d2,LAB_80032320
-        8003231c da 00           mov        d15,#0x0
+        8003231c da 00           mov        d15,#0x0                                    // <-- Patch starts here
         8003231e 3c 02           j          LAB_80032322
 
 ```
