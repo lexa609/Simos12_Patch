@@ -57,7 +57,7 @@ The patch modifies specific memory checks in the CBOOT to disable RSA verificati
 
 ---
 
-##### 🔧 Patch Application
+### 🔧 Patch Application
 **1. Patch Raw Bytes**
 
 Apply the patch via the Hex editor (HxD, 010 Editor):
@@ -73,7 +73,7 @@ The checksum will need to be recalculated, many loaders calculate the checksum:
 
 The checksum can be calculated using a Python script. https://github.com/TheFlashBold/simos-12.1-stuff/blob/master/Patch%20ASW.md
 
-###### How to install it in the ECU 
+### 📥  How to install it in the ECU - old 
 
 <pre>
 Simos12.1 can be read on the table without opening using Bench Mode
@@ -101,7 +101,53 @@ Note:
    Connecting Simos12 on the table   [VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
 
+### 📥 How to install it in the ECU
 
+Simos12.1 can be read on the bench **without opening** the casing using **Bench Mode**.
+
+---
+
+#### 🧰 Required Tool
+*   **ECUbench‑3.1.3.5 (AMTbst)** — for full ECU read including the OTP area.
+
+---
+
+#### 📌 Procedure
+
+1.  **Make a full backup**  
+    Connect to the ECU and read both **iROM** and **eROM**.  
+    *This gives you a complete flash image including the OTP area.*
+
+2.  **Edit the iROM firmware**  
+    Open the IROM dump in a **HEX editor** and apply the patches described in [🔧 Patch Application](#-patch-application).
+
+3.  **Write the modified IROM back**  
+    Flash the patched IROM into the ECU.  
+    > ✅ **Checksum is usually recalculated automatically** during writing by the tool (ECUbench / PCMflash).
+
+---
+
+#### ✅ Result
+
+Once the writing is complete, the ECU can be installed back into the vehicle.  
+You can now flash modified **FULL** and **CAL** programs via **SimosTools** or **VW_Flash (Linux and Windows)**.
+
+---
+
+#### ⚠️ Important Note
+
+> **Hardware Version Number (e.g. X09) does not change** – it stays as `H09`.  
+> This is because we write the data **directly to CBOOT**, not to the hardware version field.
+
+---
+
+#### 📸 Bench Setup Reference
+
+| Bench connection photo | Close‑up wiring |
+|------------------------|-----------------|
+| ![20260117_172800](https://github.com/user-attachments/assets/b62f3d5b-8b7d-4c6b-9158-ee3210367c79) | ![20250629_171723](https://github.com/user-attachments/assets/75de7e90-5023-404b-9396-03ed84de2e0f) |
+
+📎 **Detailed pinout:** [**VAG_Simos12.pdf**](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
 
    
