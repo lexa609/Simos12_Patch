@@ -19,12 +19,12 @@ This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by ena
 ---
 
 
-## 🛠️ How It Works
+### 🛠️ How It Works
 
 The patch modifies specific memory checks in the CBOOT to disable RSA verification. For technical details on the mechanism, see the original documentation:
 *   [**VW_Flash Documentation**](https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md)
 
-### Assembly language
+#### Assembly language
 
 ```
         Function		Memory Check	Required Value
@@ -53,24 +53,27 @@ The patch modifies specific memory checks in the CBOOT to disable RSA verificati
         8003231a f6 23           jnz        d2,LAB_80032320
         8003231c da 00           mov        d15,#0x0                                    // <-- Patch starts here
         8003231e 3c 02           j          LAB_80032322
-
 ```
 
+---
 
+##### 🔧 Patch Application
+**1. Patch Raw Bytes**
 
-### Patch Raw Bytes
-Apply the patch via the Hex editor.
+Apply the patch via the Hex editor (HxD, 010 Editor):
 The checksum will need to be recalculated, many loaders calculate the checksum:
 
-```
-Hex adress    hex value 
-21b50         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2     // You don't have to use it.
+| Hex adress    | Original bytes              | Modified bytes              | Note                            |
+|---------------|-----------------------------|-----------------------------|---------------------------------|
+| `21b50`       | `DA 00 3C 02 DA 01 02 F2`   | `00 00 00 00 DA 01 02 F2`   | You don't have to use it        |
+| `3231c`       | `DA 00 3C 02 DA 01 02 F2`   | `00 00 00 00 DA 01 02 F2`   |                                 |
 
-3231c         DA 00 3C 02 DA 01 02 F2  ==> 00 00 00 00 DA 01 02 F2
-```
+
+**2. Checksum**
+
 The checksum can be calculated using a Python script. https://github.com/TheFlashBold/simos-12.1-stuff/blob/master/Patch%20ASW.md
 
-## How to install it in the ECU 
+###### How to install it in the ECU 
 
 <pre>
 Simos12.1 can be read on the table without opening using Bench Mode
