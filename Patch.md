@@ -72,33 +72,8 @@ The checksum will need to be recalculated, many loaders calculate the checksum:
 **2. Checksum**
 
 The checksum can be calculated using a Python script. https://github.com/TheFlashBold/simos-12.1-stuff/blob/master/Patch%20ASW.md
+[crc.zip](https://github.com/user-attachments/files/25267965/crc.zip)
 
-### 📥  How to install it in the ECU - old 
-
-<pre>
-Simos12.1 can be read on the table without opening using Bench Mode
-
-To read the ECU completely, including the OTP area, you will need - ECUbench-3.1.3.5 (AMTbst) 
-
-
-1) Connect to the ECU and make a full backup of Irom and Erom (This is a full flash image including OTP)
-2) Editing the Irom firmware via the Hex editor
-3) Record the edited Irom in the ECU. The checksum will be recalculated during recording in the ECU.
-
-That's it, the ECU can be installed in the car. 
-Now you can record the modified FULL and CAL program via SimosTools or VW_Flash linux.
-
-Note:
-        Hardawre Version Number:H09 ==> X09  
-        It doesn't change, we write the data directly to CBOOT.
-
-</pre>
-
-![20260117_172800](https://github.com/user-attachments/assets/b62f3d5b-8b7d-4c6b-9158-ee3210367c79)
-![20250629_171723](https://github.com/user-attachments/assets/75de7e90-5023-404b-9396-03ed84de2e0f)
-
-
-   Connecting Simos12 on the table   [VAG_Simos12.pdf](https://github.com/user-attachments/files/24864107/VAG_Simos12.pdf)
 
 
 ### 📥 How to install it in the ECU
