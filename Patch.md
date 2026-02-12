@@ -1,15 +1,23 @@
-# Simos 12.1 RSA Off CBOOT
-This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by enabling "Sample Mode" in CBOOT, which disables the cryptographic validation.
-This is based on information from https://github.com/bri3d/VW_Flash for Simos 18 
+# Simos 12.1 RSA Off CBOOT Patch
 
-## Hardware and Soft
-<pre>
-ECU Simos12.1 Harware Number: 06K907425A
-VW part number: 8V0906264E
-VW ASW Version: 003 
-firmware: FL_8V0906264E__0003
-BIN software code: SC100CF0
-</pre>
+This patch allows bypassing RSA signature verification on Simos 12.1 ECUs by enabling "Sample Mode" in CBOOT, which disables the cryptographic validation.
+
+> **Disclaimer:** Based on reverse-engineering information from the [bri3d/VW_Flash](https://github.com/bri3d/VW_Flash) project for Simos 18. Use at your own risk.
+
+---
+
+## 📋 Target ECU Information
+
+| Parameter           | Value                  |
+| :------------------ | :--------------------- |
+| **ECU Hardware**    | Simos12.1, 06K907425A  |
+| **VW Part Number**  | 8V0906264E             |
+| **VW ASW Version**  | 003                    |
+| **Firmware**        | `FL_8V0906264E__0003`  |
+| **BIN Software Code**        | `SC100CF0`             |
+
+---
+
 
 ## How It Works
 https://github.com/bri3d/VW_Flash/blob/master/docs/docs.md
